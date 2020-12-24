@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TrialDesign = () => {
+const Account = () => {
   const web3Context = useWeb3(`wss://mainnet.infura.io/ws/v3/${infuraProjectId}`);
   const { networkId, accounts, providerName, lib } = web3Context;
   const requestAuth = async web3Context => {
@@ -30,8 +30,6 @@ const TrialDesign = () => {
     }
   };
 
-  const requestAccess = useCallback(() => requestAuth(web3Context), []);
-  
   const [balance, setBalance] = useState(0);
 
   const getBalance = useCallback(async () => {
@@ -45,9 +43,7 @@ const TrialDesign = () => {
   }, [accounts, getBalance, networkId]);
 
   const classes = useStyles();
-  const message = () => {
-    alert("Go to www.metamask.com") 
-   }
+
 
    
     return  <div className="App">
@@ -55,7 +51,6 @@ const TrialDesign = () => {
       <box className = "row"> 
       <img alt="dice" className="dice" src={money} />
       <img alt="dice" className="dice" src={dice} />
-     
       <img alt="dice" className="dice" src={money} />
       </box>
    
@@ -128,4 +123,4 @@ Number of Games played:
   
   }
 
-export default TrialDesign; 
+export default Account; 
