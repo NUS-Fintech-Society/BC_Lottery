@@ -1,14 +1,16 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 
 import {Route, withRouuter} from 'react-router-dom';
 import { useWeb3 } from '@openzeppelin/network/react';
 
+import './App.css';
+import dice from './images/dice.gif';
+import money from './images/money.gif';
 
 const infuraProjectId = '95202223388e49f48b423ea50a70e336';
 
 
-function App1(props) {
+const TrialDesign = () => {
   const web3Context = useWeb3(`wss://mainnet.infura.io/ws/v3/${infuraProjectId}`);
   const { networkId, networkName, accounts, providerName, lib } = web3Context;
   const requestAuth = async web3Context => {
@@ -39,23 +41,45 @@ function App1(props) {
    }
 
    
+    return  <div className="App">
+    <header className="App-header">
+      <box className = "row"> 
+      <img alt="dice" className="dice" src={money} />
+      <img alt="dice" className="dice" src={dice} />
+     
+      <img alt="dice" className="dice" src={money} />
+      </box>
+   
+     
+      <p1>
 
-  return (
-    <div>
-      <h3> Welcome to Casino Royale! </h3>
-      <br></br>
-         <br></br>
-         <br></br>
+       Welcome to Casino Royale
+      </p1> 
+      
+      <a
+        className="App-link"
+        href="https://reactjs.org"
        
-        <br></br>
-         <br></br>
-       
+      >
+          Metamask
+        </a>
+        
+        
+      </header>
+
+      <div  className="spacecontainer"> </div>
     
-      {accounts && accounts.length ? (
+     
+      <div  className="containerprofile">
+
+{/* insert image of profile account */}
+
+      
+    {accounts && accounts.length ? (
         <div>
 
 
-    Let's make money together 
+  
        <div>Your address: {accounts && accounts.length ? accounts[0] : 'Unknown'}</div>
       <div>Your ETH balance: {balance}</div>
      
@@ -65,18 +89,19 @@ function App1(props) {
        
        <div>
       Cant see any account details? Login to metamask!
-<br></br>
-<br></br>
-<br></br>
-      <button onClick={message}> What is Metamask? </button>
-      <br></br>
-<br></br>
+
+
 
         </div>
       ) : (
         <div></div>
       )}
-    </div>
-  );
-}
-export default App1;
+</div>
+
+
+  </div>
+
+  
+  }
+
+export default TrialDesign; 
