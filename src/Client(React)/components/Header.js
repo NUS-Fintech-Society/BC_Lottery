@@ -10,9 +10,7 @@ class Header extends Component {
     const clickables = [
 
     { name: "Overview" },
-    { name: "Trial" },
-   
-
+    
     { name: "Account" },
    
   ];
