@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './Client(React)/components/Header';
 import Main from './Client(React)/components/Main';
+import Navbar from './Client(React)/components/Navbar/Navbar';
 
 
 
@@ -22,7 +22,7 @@ if (!ethEnabled()) {
 
 return (
   <div>
-  <Header />
+  <Navbar />
   <Main />
   </div>
 
