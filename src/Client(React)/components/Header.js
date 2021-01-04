@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 
 class Header extends Component {
   state = {
@@ -10,7 +10,9 @@ class Header extends Component {
     const clickables = [
 
     { name: "Overview" },
-    
+    { name: "Trial" },
+   
+
     { name: "Account" },
    
   ];

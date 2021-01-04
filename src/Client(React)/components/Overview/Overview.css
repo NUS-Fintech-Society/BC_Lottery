@@ -21,13 +21,14 @@ body {
   }
   
   .header{
-    color: #444444;
+    color: #374B8C;
     width: 100%;
     text-align: center;
     height: 170px;
     font-family: 'Abril Fatface', cursive;
     font-size: 42px;
     align-content: center;
+    padding: 30px;
   }
   
   .section{
@@ -46,34 +47,33 @@ body {
   
   .small-div {
     width: 20%;
-    text-align: center;
+    text-align: left;
   }
   
   .big-div {
     width: 80%;
-    text-align: center;
+    text-align: left;
   }
   
   .div-title {
     font-size: 24px;
     font-weight: 600;
-    color: #DB0038;
+    color: #9B7BC4;
     font-family: 'Press Start 2P', cursive;
   }
   
   .div-description {
     font-size: 12px;
-    color: #519DD9;
+    color: #374B8C;
     font-family: 'Armata', sans-serif;
     font-weight: bold;
   }
   
   .join-game {
-    color: #444444;
+    color: #F7F6F5;
     font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    background-color: #53BAC1;
+    text-align: left;
+    background-color: #7699CF;
     border-radius: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: left;
   }
