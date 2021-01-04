@@ -2,27 +2,62 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+padding-top: 8%;
+padding-bottom: 8%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(./background.jpg);
+  font-size: 180%;
+  font-weight: bold; 
+  color: white;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+.App-link {
+  color: #61dafb;
+  font-size: 100%;
+  
 }
 
-.App-intro {
-  font-size: large;
+.dice{
+  height : 108px; 
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.spacecontainer{
+  height: 50px; 
+}
+
+.overall{
+  flex-direction: column;
+}
+
+.containerprofile{
+  min-height: 20vh;
+  flex-direction: row;
+  text-align: left;
+}
+
+.infocontainer{
+  padding-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 20vh;
+  flex-direction: row;
+  font-size: 120%; 
+}
+
+.gamecontainer{
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 20vh;
+  text-align: left;
+  font-size: 120%; 
+}
+
+.sidenote{
+  font-size: 80%;
 }
