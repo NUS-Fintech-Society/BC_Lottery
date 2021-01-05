@@ -9,7 +9,19 @@ This is a simple dApp centred around a lottery game, built using Solidity, React
 
 
 
-## Available Scripts
+
+## Whats the game about? 
+
+Similar to a lottery game, players will bet on a number with their ether. A random number will be chosen by the system and the winner will be rewarded with the prize money proportionate to the amount they betted on. 
+
+
+## Contributors 
+
+Colin CHan Wei Hua 
+Soon Wee 
+Megan
+Bryan Woo
+
 
 In the project directory, you can run:
 
