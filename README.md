@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# Blockchain Lottery 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple dApp centred around a lottery game, built using Solidity, React and the Truffle Suite. Through this project, it aims to appreciate the following: 
+
+1. Blockchain promotes fairness of the games with its transparency since every piece of information is stored on the blocks 
+2. The game is now easily accessible and available to anyone with a Metamask account, reducing barriers to entry for playersto participate. 
+3. Enhances trust in the system with the distribution of funds since every nods has a copy of hte ledger and reduces fraud. 
+4. This promotes democracy and freedom from governemnetal / centralised control, eliminating the prevlaent concern of privacy today. 
+
+
 
 ## Available Scripts
 
