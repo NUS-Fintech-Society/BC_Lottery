@@ -5,7 +5,6 @@ import lottery from './lottery';
 
 class App extends Component {
   state = {
-    manager: '',
     players: [],
     balance: '',
     value: '',
@@ -48,7 +47,7 @@ class App extends Component {
     await lottery.methods.enter().send({
       from: accounts[0],
       value: web3.utils.toWei(this.state.value, 'ether')
-    });
+    }); 
 
     this.setState({ message: 'You have been entered!' });
     this.setState({ value: '' });
@@ -73,7 +72,7 @@ class App extends Component {
       from: accounts[0]
     });
 
-    this.setState({ message: 'Check your account. The winner is picked!' });
+    this.setState({ message: 'Check your account. The winner is picked!' + accounts[0] });
 
    
     const players = await lottery.methods.getPlayers().call();
@@ -100,7 +99,7 @@ class App extends Component {
           
           <form onSubmit={this.onSubmit}>
           
-            <label>Amount of ether to enter</label>
+            <label>Amount of ether to enter. This will be converted to tokens </label>
             <input
               type="number"
               value={this.state.value}
@@ -108,8 +107,32 @@ class App extends Component {
             />
             <button disabled={this.state.loading}>Enter</button>
           </form>
+
+          <form onSubmit={this.onSubmit}>
+          
+          <label>Bet a number (Change BE) </label>
+          <input
+            type="number"
+            value={this.state.value}
+            onChange={event => this.setState({ value: event.target.value })}
+          />
+          <button disabled={this.state.loading}>Enter</button>
+        </form>
+
+
+
           <hr />
+          <h4> Token conversion</h4>
+          Number of tokens : {this.state.value}
+
           <h4>Ready to pick a winner?</h4>
+
+         
+    
+          ? {this.state.players.length} != 5
+
+        //need to compare with number of players 
+
           <button
             onClick={this.onClick}
             disabled={this.state.loading || !this.state.players.length}
