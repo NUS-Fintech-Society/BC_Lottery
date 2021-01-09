@@ -17,6 +17,9 @@
                   '
                   join='JOIN GAME'
                 />
+                <br></br>
+                <br></br>
+                <Infobox/>
                 <Wave/>
               </div>
       )
@@ -70,6 +73,28 @@
               
           </div>
           </div>
+      )
+    }
+
+    const Infobox = () => {
+      return(
+        <div className='box'>
+          <span className= 'box-2'>
+          GAMEROOM 1
+          </span>
+          <br></br>
+          <br></br>
+          <span className= 'box-1'>
+          <i className="fas fa-users"></i>
+          Number of Participants:
+          </span>
+          <br></br>
+          <br></br>
+          <span className= 'box-1'>
+          <i className="fas fa-coins"></i>
+          Pot Size:
+          </span>
+        </div>
       )
     }
 

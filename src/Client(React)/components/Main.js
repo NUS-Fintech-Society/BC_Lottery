@@ -10,9 +10,9 @@ const Main = () => (
   <div>
     <Switch>
       <Route path='/Overview' component={Overview} />
+      <Route path='/Gameplay' component={Gameplay} />
       <Route path='/' component={Account} />
       <Route path='/Trial' component={Trial} />
-      <Route path ='/Gameplay' component={Gameplay}/>
 
     </Switch>
   </div>

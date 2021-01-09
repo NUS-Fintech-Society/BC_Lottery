@@ -77,3 +77,39 @@ body {
     border-radius: 25px;
     justify-content: left;
   }
+
+  .box {
+    background: linear-gradient(90deg, #9B7BC4 0%, #7699CF 100%);
+    text-align: center;
+    padding: 30px;
+    width: 50%;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .box-2 {
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: underline;
+    color: #F7F6F5;
+    font-size: 25px;
+  }
+
+.box-1 {
+  padding: 10px;
+    font-family: 'Abril Fatface', cursive;
+    color: #F7F6F5;
+    font-size: 25px;
+}
+
+.fa-users {
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.fa-coins {
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+}
