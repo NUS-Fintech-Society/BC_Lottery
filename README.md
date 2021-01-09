@@ -18,10 +18,10 @@ Similar to a lottery game, players will bet on a number with their ether. A rand
 
 ## Contributors 
 
+Alicia, 
 Colin Chan Wei Hua, 
 Soon Wee, 
 Megan,
 Bryan Woo, 
 Oliver, 
-Alicia
 
