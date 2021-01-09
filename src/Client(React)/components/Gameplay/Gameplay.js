@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {useState} from 'react'
-import './App.css';
-import web3 from './web3';
-import lottery from './lottery';
+import './Gameplay.css';
+import web3 from './web3.js';
+import lottery from './lottery.js';
 import Button from '@material-ui/core/Button';
 
-
-class App extends React.Component {
+class Gameplay extends React.Component {
   state = {
     manager: '',
     players: [],
@@ -207,4 +206,4 @@ const Wave = () => {
       )
     }
 
-export default App;
+export default Gameplay;
