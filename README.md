@@ -1,3 +1,6 @@
+
+=======
+
 # Blockchain Lottery 
 
 This is a simple dApp centred around a lottery game, built using Solidity, React and the Truffle Suite. Through this project, it aims to appreciate the following: 
@@ -17,8 +20,11 @@ Similar to a lottery game, players will bet on a number with their ether. A rand
 
 ## Contributors 
 
+Alicia, 
 Colin Chan Wei Hua, 
 Soon Wee, 
 Megan,
-Bryan Woo
+Bryan Woo, 
+Oliver, 
 
+>>>>>>> 24cdc9dee63b6a661a6fed821dbf27b9349f2b82
