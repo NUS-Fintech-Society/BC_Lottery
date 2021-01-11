@@ -11,8 +11,6 @@ class Header extends Component {
 
     { name: "Overview" },
     { name: "Trial" },
-   
-
     { name: "Account" },
    
   ];
