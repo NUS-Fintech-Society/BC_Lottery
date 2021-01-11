@@ -96,12 +96,7 @@ const Account = () => {
      </div>
      <br></br>
 
-     <div  className="gamecontainer"> 
-Number of Games played: 
-     </div>
-     <div  className="gamecontainer"> 
-Number of Games played: 
-     </div>
+     
         </div>
         
       ) : !!networkId && providerName !== 'infura' ? ( 
@@ -113,7 +108,7 @@ Number of Games played:
 
         </div>
       ) : (
-        <div>   fekf</div>
+        <div>  </div>
       )}
 </div>
 

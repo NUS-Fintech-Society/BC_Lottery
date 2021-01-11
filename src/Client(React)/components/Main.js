@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { Component } from "react";
 import { Router, Switch, Route } from "react-router-dom";
 import Overview from './Overview/Overview.js';
 import history from './Navbar/history';
