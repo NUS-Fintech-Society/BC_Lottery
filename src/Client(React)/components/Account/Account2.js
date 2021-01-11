@@ -1,22 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useWeb3 } from '@openzeppelin/network/react';
-// import Avatar from '@material-ui/core/Avatar';
-// import gambler from './images/gambler.jpg';
-// import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import dice from './images/dice.gif';
 import money from './images/money.gif';
 import PictureUploader from './PictureUploader';
 
-
-// const useStyles = makeStyles((theme) => ({
-
-//   large: {
-//     width: theme.spacing(18),
-//     height: theme.spacing(18),
-    
-//   },
-// }));
 
 const Account = () => {
   const web3Context = useWeb3(`wss://mainnet.infura.io/ws/v3/95202223388e49f48b423ea50a70e336`);
