@@ -18,6 +18,8 @@ class Gameplay extends React.Component {
     account: '',
     guess: 0
   };
+  sendData = () => {this.props.parentCallback("Hello!");}
+
   async componentDidMount() {
    
     const players = await lottery.methods.getPlayers().call();
