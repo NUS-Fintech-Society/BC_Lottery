@@ -13,13 +13,6 @@ export const MenuItems = [
 
     },
 
-   /* {
-        title: 'Gameplay',
-        url: 'Gameplay', //put the link here
-        cName: 'nav-links'
-
-    },
-    */
 ]
 
      
