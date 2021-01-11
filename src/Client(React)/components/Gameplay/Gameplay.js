@@ -73,7 +73,7 @@ class Gameplay extends React.Component {
     });
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
-    const winningNumber = players%2; 
+    
     const convertedEthers = this.state.balance / 1000000000000000000;
     await lottery.methods.pickWinner().send({
       from: accounts[0]
