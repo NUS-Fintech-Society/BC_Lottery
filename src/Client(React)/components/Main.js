@@ -12,7 +12,7 @@ const Main = () => (
      <Router history={history}>
     <Switch>
       <Route path='/Overview' component={Overview} />
-      <Route path='/Gameplay' component={Gameplay} />
+      <Route path='/Gagemeplay' component={Gameplay} />
       <Route path='/' component={Account} />
 
     </Switch>
