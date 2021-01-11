@@ -8,7 +8,7 @@ export const MenuItems = [
  
     {
         title: 'Account',
-        url: 'Account2', //put the link here
+        url: 'Account', //put the link here
         cName: 'nav-links'
 
     },

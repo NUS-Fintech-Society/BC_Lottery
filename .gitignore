@@ -1,6 +1,7 @@
 node_modules
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> eb58adaac642c2e1291a0dc9605adc97de2ad7bb
@@ -8,3 +9,8 @@ build
 app/src/contracts
 .DS_Store
 >>>>>>> eb597e17a281b4130cc0ceca97f01eb6c8305b54
+=======
+build
+app/src/contracts
+.DS_Store
+>>>>>>> 7a5269b7c4e30d99c4e0670fed2d4ab3467f3026
