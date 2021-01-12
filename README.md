@@ -16,12 +16,3 @@ This is a simple dApp centred around a lottery game, built using Solidity, React
 Similar to a lottery game, players will bet  with their ether. The system randomly chooses the winner who will  be rewarded with the entire pool of the prize money. Go big or go home!
 
 
-## Contributors 
-
-Alicia, 
-Colin Chan Wei Hua, 
-Soon Wee, 
-Megan,
-Bryan Woo, 
-Oliver 
-

@@ -3,9 +3,15 @@
   import { ReactComponent as YourSvg } from './Online games addiction-amico.svg';
   import history from './../Navbar/history';
   import { Button } from 'react-bootstrap';
+  import GamePlay from './Gameplay/Gameplay.js';
 
 
-  const Overview = () => {
+  class Overview extends React.Component{
+    state = {playerSize: ""}
+    callbackFunction = (childData) => {
+      this.setState({playerSize: childData});
+    }
+    render(){
       return(
         <div id = "body">
                 <Header/>
@@ -20,7 +26,10 @@
                   >
                   
                   </Card>
-                  
+                <div>
+                 <GamePlay parentCallback = {this.callbackFunction}/>
+                 <p> {this.state.playerSize} </p>
+                </div>
                 
                 <br></br>
                 <br></br>
@@ -28,6 +37,7 @@
                 <Wave/>
               </div>
       )
+    }
     }
 
     const Header = () => {
