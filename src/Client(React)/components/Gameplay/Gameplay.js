@@ -174,7 +174,7 @@ class Gameplay extends React.Component {
           <Button variant="contained" size="Large" color="secondary" className="lato-regular-normal-black-16px"></Button>
         </div>
         <div className={`pickWinnerButton ${""}`}>
-          <Button variant="contained" disabled={this.state.players.length==0} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
+          <Button variant="contained" disabled={this.state.players.length<=3} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
         </div>
         </div>
         <Wave/>
