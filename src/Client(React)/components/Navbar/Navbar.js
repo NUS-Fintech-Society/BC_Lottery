@@ -31,8 +31,7 @@
                 )
               })}
             </ul>
-            <Button>Log In</Button>
-
+           
           </nav>
       );
     }
