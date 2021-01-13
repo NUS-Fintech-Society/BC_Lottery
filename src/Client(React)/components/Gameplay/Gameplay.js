@@ -45,7 +45,7 @@ class Gameplay extends React.Component {
 
     this.setState({ loading: true });
     this.setState({
-      message: 'This may take up to a minute. Waiting on transaction success...'
+      message: 'Transaction underway.....'
     });
 
     await lottery.methods.enter().send({
@@ -78,8 +78,8 @@ class Gameplay extends React.Component {
     await lottery.methods.pickWinner().send({
       from: accounts[0]
     });
-    const winner = await lottery.methods.getWinner().call();
-    this.setState({ message: 'Congrats User ' + winner + ' , you have won ' + convertedEthers + ' Ethers!'});
+
+    this.setState({ message: 'Congrats User ' + accounts[0] + ' , you have won ' + convertedEthers + ' Ethers!'});
 
    
    
@@ -120,12 +120,15 @@ class Gameplay extends React.Component {
     _inputPlayer="Players"
   }
   if (this.state.pageLoading) {
-      return <h1>Now Connecting....</h1>
+      return <h1>Now Connecting.... Ensure you are on the Rinkeby Test Network</h1>
   } else{
       return (
+      
       <div className="x1homepage">
+          <br></br>
         <img className="title" src={X1HomepageData.title} />
         <h1 className="room-details valign-text-middle border-class-1 atomicage-normal-white-36px">
+          
           <span>
             <span className="span1">{X1HomepageData.spanText}</span>
           </span>
@@ -174,7 +177,7 @@ class Gameplay extends React.Component {
           <Button variant="contained" size="Large" color="secondary" className="lato-regular-normal-black-16px"></Button>
         </div>
         <div className={`pickWinnerButton ${""}`}>
-          <Button variant="contained" disabled={this.state.players.length<=3} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
+          <Button variant="contained" disabled={this.state.players.length<=2} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
         </div>
         </div>
         <Wave/>

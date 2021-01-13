@@ -7,7 +7,6 @@ contract Lottery {
     using SafeMath for uint256;
     address public manager;
     address[] public players;
-    address public winner;
 
     constructor() public {
         manager = msg.sender;
@@ -29,13 +28,8 @@ contract Lottery {
 
     function pickWinner() public {
         uint256 index = random() % players.length;
-        winner = players[index];
         payable(players[index]).transfer(address(this).balance);
         players = new address[](0);
-    }
-
-    function getWinner() public view returns (address) {
-        return winner;
     }
 
     function getPlayers() public view returns (address[] memory) {

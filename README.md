@@ -15,7 +15,7 @@ These are stored in ethereum's rinkeby test network, ensuring immutability.
 
 ## Running the programme 
 
-1. Install the relevant dependencies by running npm install 
+1. Install the relevant dependencies by running npm nstall 
 2. Run npm start to deploy the project locally 
 3. Change to the Rinkeby test network to interact with the project. 
 
