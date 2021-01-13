@@ -26,11 +26,6 @@
                   >
                   
                   </Card>
-                <div>
-                 <GamePlay parentCallback = {this.callbackFunction}/>
-                 <p> {this.state.playerSize} </p>
-                </div>
-                
                 <br></br>
                 <br></br>
                 <Infobox/>

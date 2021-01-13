@@ -80,8 +80,8 @@ class Gameplay extends React.Component {
     await lottery.methods.pickWinner().send({
       from: accounts[0]
     });
-
-    this.setState({ message: 'Congrats User ' + accounts[0] + ' , you have won ' + convertedEthers + ' Ethers!'});
+    const winner = await lottery.methods.getWinner().call();
+    this.setState({ message: 'Congrats User ' + winner + ' , you have won ' + convertedEthers + ' Ethers!'});
 
    
    
