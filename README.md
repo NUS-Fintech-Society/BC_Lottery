@@ -30,5 +30,5 @@ https://webcache.googleusercontent.com/search?q=cache:VoC3aFOaUSoJ:https://fauce
 ![AccountLocked](./images/Accountlocked.png)
 ![AccountUnlocked](./images/AccountLogged.png)
 ![Game](./images/GameRoom1.png)
-![Games](./images/GameRoom2.png)
+![Game2](./images/GameRoom2.png)
 
