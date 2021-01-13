@@ -11,15 +11,13 @@ class Gameplay extends React.Component {
     players: [],
     balance: '',
     value: '',
-    message: 'Welcome to Holly Rolly Polly!',
+    message: 'Min : 3 players',
     loading: false,
     pageLoading: true,
     standardBet: '',
     account: '',
     guess: 0
   };
-  sendData = () => {this.props.parentCallback("Hello!");}
-
   async componentDidMount() {
    
     const players = await lottery.methods.getPlayers().call();
