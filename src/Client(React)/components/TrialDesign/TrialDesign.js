@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
-import {Route, withRouuter} from 'react-router-dom';
 import { useWeb3 } from '@openzeppelin/network/react';
 
 import './App.css';
@@ -12,7 +10,7 @@ const infuraProjectId = '95202223388e49f48b423ea50a70e336';
 
 const TrialDesign = () => {
   const web3Context = useWeb3(`wss://mainnet.infura.io/ws/v3/${infuraProjectId}`);
-  const { networkId, networkName, accounts, providerName, lib } = web3Context;
+  const { networkId, accounts, providerName, lib } = web3Context;
   const requestAuth = async web3Context => {
     try {
       await web3Context.requestAuth();
@@ -20,8 +18,6 @@ const TrialDesign = () => {
       console.error(e);
     }
   };
-
-  const requestAccess = useCallback(() => requestAuth(web3Context), []);
   
   const [balance, setBalance] = useState(0);
 
