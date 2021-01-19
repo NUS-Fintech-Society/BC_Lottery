@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import {useState} from 'react'
+import React from 'react';
 import './Gameplay.css';
 import web3 from './web3.js';
 import lottery from './lottery.js';
@@ -11,7 +10,7 @@ class Gameplay extends React.Component {
     players: [],
     balance: '',
     value: '',
-    message: 'Welcome to Holly Rolly Polly!',
+    message: 'Min : 3 players',
     loading: false,
     pageLoading: true,
     standardBet: '',
@@ -71,18 +70,18 @@ class Gameplay extends React.Component {
     this.setState({
       message: 'Please wait...'
     });
-
+    const players = await lottery.methods.getPlayers().call();
+    const balance = await web3.eth.getBalance(lottery.options.address);
+    
     const convertedEthers = this.state.balance / 1000000000000000000;
     await lottery.methods.pickWinner().send({
       from: accounts[0]
     });
-
-    this.setState({ message: 'Congrats User ' + accounts[0] + ' , you have won ' + convertedEthers + ' Ethers!'});
+    const winner = await lottery.methods.getWinner().call();
+    this.setState({ message: 'Congrats User ' + winner + ' , you have won ' + convertedEthers + ' Ethers!'});
 
    
-    const players = await lottery.methods.getPlayers().call();
-    const balance = await web3.eth.getBalance(lottery.options.address);
-
+   
     this.setState({  players, balance });
     this.setState({ loading: false });
     this.setState({ standardBet: ""});
@@ -135,7 +134,6 @@ class Gameplay extends React.Component {
           <div className={`nrplayers-frame border-class-2 ${""}`}>
           <div className="address valign-text-middle border-class-1 armata-regular-normal-black-16px">{this.state.players.length} {_inputPlayer}</div>
         </div>
-          {/* <NrplayersFrame {...nrplayersFrameProps}>{nrplayersFrameData}</NrplayersFrame> */}
         </div>
         <div className="number-of-players valign-text-middle border-class-1 armata-regular-normal-black-16px">
           {X1HomepageData.numberOfPlayers}{this.state.players.length}
@@ -145,7 +143,6 @@ class Gameplay extends React.Component {
           <div className={`nrplayers-frame border-class-2 ${""}`}>
           <div className="address valign-text-middle border-class-1 armata-regular-normal-black-16px">{this.state.balance / 1000000000000000000} {_inputEth}</div>
         </div>
-          {/* <NrplayersFrame {...nrplayersFrame2Props} className="pot-frame"></NrplayersFrame> */}
         </div>
         <div className="current-potsize valign-text-middle border-class-1 armata-regular-normal-black-16px">
           {X1HomepageData.currentPotsize}{web3.utils.fromWei(this.state.balance, 'ether')} {_inputEth}
@@ -161,8 +158,7 @@ class Gameplay extends React.Component {
               onChange={event => this.setState({ value: event.target.value })}
             />
           </div>
-          {/* <Overlapgroup3 {...overlapgroup3Props}></Overlapgroup3> */}
-          <div className={`partButton ${""}`}>
+               <div className={`partButton ${""}`}>
           <Button variant="contained" disabled={this.state.value<1} size="Large" className="participate border-class-1 lato-regular-normal-black-16px" onClick = {this.onSubmit}>Participate</Button>
         </div>
         </div>
@@ -171,13 +167,11 @@ class Gameplay extends React.Component {
         </div>
         <div className="overlap-group1">
           <div className="armata-regular-normal-white-20px">{this.state.message}</div>
-          {/* <div className="text-2 border-class-1 armata-regular-normal-black-20px">{this.state.message}</div> */}
-          {/* <Overlapgroup3 {...overlapgroup32Props} className="overlap-group2" /> */}
-        <div className={`backButton ${""}`}>
-          <Button variant="contained" size="Large" color="secondary" className="lato-regular-normal-black-16px">Back</Button>
+            <div className={`backButton ${""}`}>
+          <Button variant="contained" size="Large" color="secondary" className="lato-regular-normal-black-16px"></Button>
         </div>
         <div className={`pickWinnerButton ${""}`}>
-          <Button variant="contained" disabled={this.state.players.length==0} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
+          <Button variant="contained" disabled={this.state.players.length<=3} size="Large" color="primary" className="lato-regular-normal-black-16px" onClick={this.onClick}>Pick Winner!</Button>
         </div>
         </div>
         <Wave/>

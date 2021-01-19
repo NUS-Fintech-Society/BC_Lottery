@@ -1,20 +1,21 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Overview from './Overview/Overview.js';
 
+import React from "react";
+import { Router, Switch, Route } from "react-router-dom";
+import Overview from './Overview/Overview.js';
+import history from './Navbar/history';
 import Account from './Account/Account';
-import Trial from './TrialDesign/TrialDesign';
-import Gameplay from './Gameplay/Gameplay';
+import Gameplay from './Overview/Gameplay/Gameplay.js';
 
 const Main = () => (
   <div>
+     <Router history={history}>
     <Switch>
       <Route path='/Overview' component={Overview} />
       <Route path='/Gameplay' component={Gameplay} />
       <Route path='/' component={Account} />
-      <Route path='/Trial' component={Trial} />
 
     </Switch>
+    </Router>
   </div>
 )
 

@@ -1,11 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
 import gambler from './images/gambler.png';
-import Avatar from '@material-ui/core/Avatar';
+import ImageAvatars from './Avatar';
 import { makeStyles } from '@material-ui/core/styles';
-
-//will try to make the avatar look nicer with CSS but this is the base version
-
 
 export default class PictureUploader extends React.Component {
  
@@ -32,34 +29,35 @@ export default class PictureUploader extends React.Component {
   renderPreview() {
     if(this.state.src) {
       return (
-        <Avatar alt="containerprofile-dice" src={this.state.src}/>
+        // <Avatar alt="containerprofile-dice" src={this.state.src}/>
+        <ImageAvatars photo={this.state.src}/>
       );
     } else {
       return (
         <p>
-          <img src={gambler}/>
+          <ImageAvatars photo={gambler}/>
         </p>
       );
     }
   }
 
-  upload() {
-    var formData = new FormData();
+  // upload() {
+  //   var formData = new FormData();
 
-    formData.append("file", this.state.picture);
+  //   formData.append("file", this.state.picture);
 
-    $.ajax({
-      url: "/some/api/endpoint",
-      method: "POST",
-      data: formData,
-      cache: false,
-      contentType: false,
-      processData: false,
-      success: function(response) {
-        // Code to handle a succesful upload
-      }
-    });
-  }
+  //   $.ajax({
+  //     url: "/some/api/endpoint",
+  //     method: "POST",
+  //     data: formData,
+  //     cache: false,
+  //     contentType: false,
+  //     processData: false,
+  //     success: function(response) {
+  //       // Code to handle a succesful upload
+  //     }
+  //   });
+  // }
 
   render() {
     return (
@@ -75,11 +73,6 @@ export default class PictureUploader extends React.Component {
         {this.renderPreview()}
         </div>
         <hr/>
-        <button
-          onClick={this.upload.bind(this)}
-        >
-          Upload
-        </button>
       </div>
     );
   }
